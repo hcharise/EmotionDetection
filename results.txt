@@ -1,59 +1,7 @@
 RESULTS
 
-Image Name, Pred Gender, Pred Emotion, Real Emotion, True/False/Unpredictable
-Images/fear11.jpg, COULD NOT DETECT FACE, undetectable
-Images/angry2.jpg, COULD NOT DETECT FACE, undetectable
-Images/neutral2222.jpg, Man, neutral, neutral, true
-Images/disgust111.jpg, Man, disgust, disgust, true
-Images/neutral1111.jpg, COULD NOT DETECT FACE, undetectable
-Images/fear1111.jpg, COULD NOT DETECT FACE, undetectable
-Images/sad11.jpg, Man, angry, sad, false
-Images/neutral11.jpg, COULD NOT DETECT FACE, undetectable
-Images/angry111.jpg, Man, angry, angry, true
-Images/fear2222.jpg, COULD NOT DETECT FACE, undetectable
-Images/angry1.jpg, Man, angry, angry, true
-Images/disgust2.jpg, Woman, disgust, disgust, true
-Images/fear2.jpg, Woman, sad, fear, false
-Images/surprise1.jpg, Man, surprise, surprise, true
-Images/disgust11.jpg, COULD NOT DETECT FACE, undetectable
-Images/disgust1.jpg, COULD NOT DETECT FACE, undetectable
-Images/surprise2222.jpg, Woman, surprise, surprise, true
-Images/surprise1111.jpg, COULD NOT DETECT FACE, undetectable
-Images/surprise2.jpg, COULD NOT DETECT FACE, undetectable
-Images/fear1.jpg, Man, neutral, fear, false
-Images/surprise11.jpg, COULD NOT DETECT FACE, undetectable
-Images/surprise222.jpg, COULD NOT DETECT FACE, undetectable
-Images/fear111.jpg, Man, happy, fear, false
-Images/happy222.jpg, COULD NOT DETECT FACE, undetectable
-Images/neutral111.jpg, Man, neutral, neutral, true
-Images/happy11.jpg, Man, neutral, happy, false
-Images/sad111.jpg, Man, sad, sad, true
-Images/angry11.jpg, Man, angry, angry, true
-Images/disgust2222.jpg, Woman, angry, disgust, false
-Images/disgust1111.jpg, Man, neutral, disgust, false
-Images/sad1.jpg, Man, neutral, sad, false
-Images/sad2222.jpg, Woman, neutral, sad, false
-Images/sad1111.jpg, Man, sad, sad, true
-Images/angry22.jpg, COULD NOT DETECT FACE, undetectable
-Images/sad2.jpg, COULD NOT DETECT FACE, undetectable
-Images/happy2.jpg, Woman, happy, happy, true
-Images/disgust222.jpg, Woman, disgust, disgust, true
-Images/neutral2.jpg, COULD NOT DETECT FACE, undetectable
-Images/surprise22.jpg, Woman, surprise, surprise, true
-Images/happy1.jpg, Man, happy, happy, true
-Images/neutral1.jpg, COULD NOT DETECT FACE, undetectable
-Images/happy1111.jpg, Man, happy, happy, true
-Images/happy22.jpg, COULD NOT DETECT FACE, undetectable
-Images/happy2222.jpg, Woman, happy, happy, true
-Images/angry222.jpg, COULD NOT DETECT FACE, undetectable
-Images/angry2222.jpg, Woman, happy, angry, false
-Images/angry1111.jpg, COULD NOT DETECT FACE, undetectable
-Images/sad222.jpg, COULD NOT DETECT FACE, undetectable
-Images/disgust22.jpg, Woman, fear, disgust, false
-Images/fear22.jpg, Woman, sad, fear, false
-Images/sad22.jpg, COULD NOT DETECT FACE, undetectable
-Images/neutral222.jpg, COULD NOT DETECT FACE, undetectable
-Images/happy111.jpg, COULD NOT DETECT FACE, undetectable
-Images/neutral22.jpg, Woman, neutral, neutral, true
-Images/fear222.jpg, COULD NOT DETECT FACE, undetectable
-Images/surprise111.jpg, COULD NOT DETECT FACE, undetectable
+Image Name,Pred Gender,Pred Emotion,Real Emotion,True/False/Error
+ImagesMini/sad_7577600.jpg,Man,sad,sad,true
+ImagesMini/happy_6269413.jpg,ERROR,ERROR,happy,undetectable
+ImagesMini/angry_84366.jpg,Man,angry,angry,true
+ImagesMini/neutral_10682784.jpg,ERROR,ERROR,neutral,undetectable

@@ -28,10 +28,11 @@ from make_predictions import *
 # Open file for storing predictions
 predictions = open("predictions.txt", "w")
 
-# Open folder containing images
-path = glob.glob("Images/*.jpg")
+# Open 'Images' folder containing images
+path = glob.glob("ImagesMini/*.jpg")
 
-# Iterate through images, detecting face and predicting gender and dominant emotion
+# Iterate through images, detecting face and predicting gender
+# and dominant emotion
 for img in path:
     make_predictions(img, predictions)
 
@@ -48,9 +49,11 @@ results = open("results.txt", "w")
 
 # Print header into results file
 results.write("RESULTS\n\n")
-results.write("Image Name, Pred Gender, Pred Emotion, Real Emotion, True/False/Unpredictable\n")
+results.write("Image Name,Pred Gender,Pred Emotion,"
+              "Real Emotion,True/False\n")
 
-# Iterate through predictions file, copying data and true/false to results file
+# Iterate through predictions file, copying data and true/false
+# to results file
 for line in predictions:
 
     # Copy line from predictions, minus '\n'
@@ -60,8 +63,8 @@ for line in predictions:
     info = line.split(",")
 
     # Check for undetectable images, end loop iteration
-    if info[1] == ' COULD NOT DETECT FACE\n':
-        results.write(", undetectable\n")
+    if info[1] == 'ERROR':
+        results.write(",undetectable\n")
         continue
 
     # Parse emotion data if face was detectable
@@ -70,9 +73,9 @@ for line in predictions:
 
     # Check if emotion prediction is correct or not
     if (pred_emotion == real_emotion):
-        results.write(", true\n")
+        results.write(",true\n")
     else:
-        results.write(", false\n")
+        results.write(",false\n")
 
 # Close both files
 predictions.close()
