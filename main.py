@@ -52,37 +52,39 @@ for line in predictions:
     image_gender = info[1]
     image_emotion = info[2].strip()
 
+    #print out the true emotion
+
     if image_emotion == "angry" and image_path.find("angry") == -1:
         false = false + 1
         results.write(", False = %d\n" % false)
         continue
     elif image_emotion == "disgust" and image_path.find("disgust") == -1:
         false = false + 1
-        results.write(", False = %d" % false)
+        results.write(", False = %d\n" % false)
         continue
     elif image_emotion == "fear" and image_path.find("fear") == -1:
         false = false + 1
-        results.write(", False = %d" % false)
+        results.write(", False = %d\n" % false)
         continue
     elif image_emotion == "neutral" and image_path.find("neutral") == -1:
         false = false + 1
-        results.write(", False = %d" % false)
+        results.write(", False = %d\n" % false)
         continue
     elif image_emotion == "sad" and image_path.find("sad") == -1:
         false = false + 1
-        results.write(", False = %d" % false)
+        results.write(", False = %d\n" % false)
         continue
     elif image_emotion == "surprise" and image_path.find("surprise") == -1:
         false = false + 1
-        results.write(", False = %d" % false)
+        results.write(", False = %d\n" % false)
         continue
     elif image_emotion == "happy" and image_path.find("happy") == -1:
         false = false + 1
-        results.write(", False = %d" % false)
+        results.write(", False = %d\n" % false)
         continue
     else:
         true = true + 1
-        results.write(", True = %d" % true)
+        results.write(", True = %d\n" % true)
 
 print("\n** TOTAL TRUE = " + str(true / (true + false + undetectable)) + " **")
 print("** TOTAL FALSE = " + str(false / (true + false + undetectable)) + " **")

@@ -1,9 +1,14 @@
-Images2/angry2.jpg, COULD NOT DETECT FACE, Undetectable = 1Images2/angry1.jpg, Man, angry, True = 1
+Images2/angry2.jpg, COULD NOT DETECT FACE, Undetectable = 1
+Images2/angry1.jpg, Man, angry, True = 1
 Images2/disgust2.jpg, Woman, disgust, True = 2
-Images2/fear2.jpg, Woman, sad, True = 3
-Images2/surprise1.jpg, Man, surprise, True = 4
-Images2/disgust1.jpg, COULD NOT DETECT FACE, Undetectable = 2Images2/surprise2.jpg, COULD NOT DETECT FACE, Undetectable = 3Images2/fear1.jpg, Man, neutral, True = 5
-Images2/sad1.jpg, Man, neutral, True = 6
-Images2/sad2.jpg, COULD NOT DETECT FACE, Undetectable = 4Images2/happy2.jpg, Woman, happy, True = 7
-Images2/neutral2.jpg, COULD NOT DETECT FACE, Undetectable = 5Images2/happy1.jpg, Man, happy, True = 8
+Images2/fear2.jpg, Woman, sad, False = 1
+Images2/surprise1.jpg, Man, surprise, True = 3
+Images2/disgust1.jpg, COULD NOT DETECT FACE, Undetectable = 2
+Images2/surprise2.jpg, COULD NOT DETECT FACE, Undetectable = 3
+Images2/fear1.jpg, Man, neutral, False = 2
+Images2/sad1.jpg, Man, neutral, False = 3
+Images2/sad2.jpg, COULD NOT DETECT FACE, Undetectable = 4
+Images2/happy2.jpg, Woman, happy, True = 4
+Images2/neutral2.jpg, COULD NOT DETECT FACE, Undetectable = 5
+Images2/happy1.jpg, Man, happy, True = 5
 Images2/neutral1.jpg, COULD NOT DETECT FACE, Undetectable = 6
