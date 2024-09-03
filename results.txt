@@ -2,16 +2,16 @@
 
 Image Name, Pred Gender, Pred Emotion, Real Emotion, True/False/Unpredictable
 Images2/angry2.jpg, COULD NOT DETECT FACE, Undetectable = 1
-Images2/angry1.jpg, Man, angry, disgust, False = 1
-Images2/disgust2.jpg, Woman, disgust, angry, False = 2
-Images2/fear2.jpg, Woman, sad, angry, False = 3
-Images2/surprise1.jpg, Man, surprise, angry, False = 4
+Images2/angry1.jpg, Man, angry, angry, True = 1
+Images2/disgust2.jpg, Woman, disgust, disgust, True = 2
+Images2/fear2.jpg, Woman, sad, fear, False = 1
+Images2/surprise1.jpg, Man, surprise, surprise, True = 3
 Images2/disgust1.jpg, COULD NOT DETECT FACE, Undetectable = 2
 Images2/surprise2.jpg, COULD NOT DETECT FACE, Undetectable = 3
-Images2/fear1.jpg, Man, neutral, angry, False = 5
-Images2/sad1.jpg, Man, neutral, angry, False = 6
+Images2/fear1.jpg, Man, neutral, fear, False = 2
+Images2/sad1.jpg, Man, neutral, sad, False = 3
 Images2/sad2.jpg, COULD NOT DETECT FACE, Undetectable = 4
-Images2/happy2.jpg, Woman, happy, angry, False = 7
+Images2/happy2.jpg, Woman, happy, happy, True = 4
 Images2/neutral2.jpg, COULD NOT DETECT FACE, Undetectable = 5
-Images2/happy1.jpg, Man, happy, angry, False = 8
+Images2/happy1.jpg, Man, happy, happy, True = 5
 Images2/neutral1.jpg, COULD NOT DETECT FACE, Undetectable = 6

@@ -38,7 +38,7 @@ predictions = open("predictions.txt", "r")
 results = open("results.txt", "w")
 
 # Print headers
-results.write("    RESULTS    \n\n")
+results.write("RESULTS\n\n")
 results.write("Image Name, Pred Gender, Pred Emotion, Real Emotion, True/False/Unpredictable\n")
 
 for line in predictions:
@@ -54,19 +54,17 @@ for line in predictions:
         results.write(", Undetectable = %d\n" % undetectable)
         continue
 
-    # Parse data if face was detectable
-    image_path = info[0]
-    pred_gender = info[1]
-    pred_emotion = info[2]
+    # Parse emotion data if face was detectable
+    pred_emotion = info[2].strip()
     real_emotion = info[3].strip()
 
     # Check if emotion prediction is correct or not
-    if pred_emotion != real_emotion:
-        false = false + 1
-        results.write(", False = %d\n" % false)
-    else:
+    if (pred_emotion == real_emotion):
         true = true + 1
         results.write(", True = %d\n" % true)
+    else:
+        false = false + 1
+        results.write(", False = %d\n" % false)
 
 print("\n** TOTAL TRUE = " + str(true / (true + false + undetectable)) + " **")
 print("** TOTAL FALSE = " + str(false / (true + false + undetectable)) + " **")
