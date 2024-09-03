@@ -1,29 +1,18 @@
-from deepface import DeepFace
-from parse_emotion import *
 import glob
+from make_predictions import *
 
-# Open file for results
+
+# Open file for storing predictions
 predictions = open("predictions.txt", "w")
 
 # Open folder containing images
-path = glob.glob("Images2/*.jpg")
+path = glob.glob("Images/*.jpg")
 
 # Iterate through images, detecting face and predicting gender and dominant emotion
 for img in path:
+    make_predictions(img, predictions)
 
-    try:
-        face_analysis = DeepFace.analyze(img)
-        predictions.write(img)
-        predictions.write(", " + face_analysis[0]['dominant_gender'])
-        predictions.write(", " + face_analysis[0]['dominant_emotion'])
-        predictions.write(", " + parse_emotion(img))
-        predictions.write("\n")
-    except:
-        predictions.write(img)
-        predictions.write(", COULD NOT DETECT FACE")
-        predictions.write("\n")
-
-# Close file for just writing
+# Close predictions file
 predictions.close()
 
 ##############################
