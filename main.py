@@ -1,4 +1,5 @@
 from deepface import DeepFace
+from parse_emotion import *
 import glob
 
 # Open file for results
@@ -15,6 +16,7 @@ for img in path:
         predictions.write(img)
         predictions.write(", " + face_analysis[0]['dominant_gender'])
         predictions.write(", " + face_analysis[0]['dominant_emotion'])
+        predictions.write(", " + parse_emotion(img))
         predictions.write("\n")
     except:
         predictions.write(img)
@@ -35,11 +37,15 @@ undetectable = 0
 predictions = open("predictions.txt", "r")
 results = open("results.txt", "w")
 
+# Print headers
+results.write("    RESULTS    \n\n")
+results.write("Image Name, Pred Gender, Pred Emotion, Real Emotion, True/False/Unpredictable\n")
+
 for line in predictions:
 
     results.write(line.strip())
 
-    #Split each line into file name and gender
+    # Split each line by comma
     info = line.split(",")
 
     # Check for undetectables
@@ -48,40 +54,16 @@ for line in predictions:
         results.write(", Undetectable = %d\n" % undetectable)
         continue
 
+    # Parse data if face was detectable
     image_path = info[0]
-    image_gender = info[1]
-    image_emotion = info[2].strip()
+    pred_gender = info[1]
+    pred_emotion = info[2]
+    real_emotion = info[3].strip()
 
-    #print out the true emotion
-
-    if image_emotion == "angry" and image_path.find("angry") == -1:
+    # Check if emotion prediction is correct or not
+    if pred_emotion != real_emotion:
         false = false + 1
         results.write(", False = %d\n" % false)
-        continue
-    elif image_emotion == "disgust" and image_path.find("disgust") == -1:
-        false = false + 1
-        results.write(", False = %d\n" % false)
-        continue
-    elif image_emotion == "fear" and image_path.find("fear") == -1:
-        false = false + 1
-        results.write(", False = %d\n" % false)
-        continue
-    elif image_emotion == "neutral" and image_path.find("neutral") == -1:
-        false = false + 1
-        results.write(", False = %d\n" % false)
-        continue
-    elif image_emotion == "sad" and image_path.find("sad") == -1:
-        false = false + 1
-        results.write(", False = %d\n" % false)
-        continue
-    elif image_emotion == "surprise" and image_path.find("surprise") == -1:
-        false = false + 1
-        results.write(", False = %d\n" % false)
-        continue
-    elif image_emotion == "happy" and image_path.find("happy") == -1:
-        false = false + 1
-        results.write(", False = %d\n" % false)
-        continue
     else:
         true = true + 1
         results.write(", True = %d\n" % true)
