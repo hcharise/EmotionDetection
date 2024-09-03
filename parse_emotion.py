@@ -1,6 +1,6 @@
-
+# Function to determine and return what true emotion is, based on file name
 def parse_emotion(image_path):
-    # print out the true emotion and check if correct or not
+    # Check for emotion possibilities, once found in image name, set as emotion variable
     if image_path.find("angry") != -1:
         emotion = "angry"
     elif image_path.find("disgust") != -1:
