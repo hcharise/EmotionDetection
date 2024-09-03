@@ -1,0 +1,14 @@
+Images2/angry2.jpg, COULD NOT DETECT FACE
+Images2/angry1.jpg, Man, angry
+Images2/disgust2.jpg, Woman, disgust
+Images2/fear2.jpg, Woman, sad
+Images2/surprise1.jpg, Man, surprise
+Images2/disgust1.jpg, COULD NOT DETECT FACE
+Images2/surprise2.jpg, COULD NOT DETECT FACE
+Images2/fear1.jpg, Man, neutral
+Images2/sad1.jpg, Man, neutral
+Images2/sad2.jpg, COULD NOT DETECT FACE
+Images2/happy2.jpg, Woman, happy
+Images2/neutral2.jpg, COULD NOT DETECT FACE
+Images2/happy1.jpg, Man, happy
+Images2/neutral1.jpg, COULD NOT DETECT FACE
