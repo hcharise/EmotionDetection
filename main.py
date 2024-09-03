@@ -18,7 +18,6 @@
 #
 #################################################################
 
-
 import glob
 from make_predictions import *
 
@@ -43,10 +42,6 @@ predictions.close()
 # RESULTS
 #################################################################
 
-false = 0
-true = 0
-undetectable = 0
-
 # Reopen files for reading predictions and writing results
 predictions = open("predictions.txt", "r")
 results = open("results.txt", "w")
@@ -66,8 +61,7 @@ for line in predictions:
 
     # Check for undetectable images, end loop iteration
     if info[1] == ' COULD NOT DETECT FACE\n':
-        undetectable = undetectable + 1
-        results.write(", Undetectable = %d\n" % undetectable)
+        results.write(", undetectable\n")
         continue
 
     # Parse emotion data if face was detectable
@@ -76,15 +70,9 @@ for line in predictions:
 
     # Check if emotion prediction is correct or not
     if (pred_emotion == real_emotion):
-        true = true + 1
-        results.write(", True = %d\n" % true)
+        results.write(", true\n")
     else:
-        false = false + 1
-        results.write(", False = %d\n" % false)
-
-print("\n** TOTAL TRUE = " + str(true / (true + false + undetectable)) + " **")
-print("** TOTAL FALSE = " + str(false / (true + false + undetectable)) + " **")
-print("** TOTAL UNDETECTABLE = " + str(undetectable / (true + false + undetectable)) + " **")
+        results.write(", false\n")
 
 # Close both files
 predictions.close()
