@@ -29,7 +29,7 @@ from make_predictions import *
 predictions = open("predictions.txt", "w")
 
 # Open 'Images' folder containing images
-path = glob.glob("ImagesMini/*.jpg")
+path = glob.glob("Images/*.jpg")
 
 # Iterate through images, detecting face and predicting gender
 # and dominant emotion
